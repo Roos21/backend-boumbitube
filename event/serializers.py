@@ -14,7 +14,7 @@ class EventSerializer(serializers.ModelSerializer):
         read_only=True)
     class Meta:
         model = Event
-        fields = ['reference_id','title','date','takePlaceAt','image','ticketInfo']
+        fields = ['reference_id','title','date','takePlaceAt','image','ticketInfo','description']
 
 class TicketInfoSerializer(serializers.ModelSerializer):
     reference_id = serializers.PrimaryKeyRelatedField(

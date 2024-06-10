@@ -22,6 +22,7 @@ class Event(TimeStamps):
     takePlaceAt = models.CharField(max_length=255)
     owner = models.ManyToManyField("accounts.User", blank=True, related_name='organizer_event')
     image = models.ImageField(upload_to='events/images/', blank=True, null=True)
+    description = models.TextField(max_length=2048,blank=True, null=True, default="Lorem ipsum dolor sit amet, consectetur adip euismod er at, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqu compliance et justo euismod. Ut enim ad minim veniam et aliqu")
     # Modification du champ ticketInfo
     ticketInfo = models.ForeignKey('TicketInfo', on_delete=models.CASCADE, blank=True, null=True)
     guestList = models.ManyToManyField(Subscriber, related_name='invited_to_event', blank=True)
