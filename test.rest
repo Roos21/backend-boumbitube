@@ -1,0 +1,7 @@
+####
+
+POST http://127.0.0.1:8000/accounts/users/create
+Content-Type: application/json
+
+{ "username": "hum@boumbitube", "password": "21rbks98", "email": "hum@gmail.com" }
+
